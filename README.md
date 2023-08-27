@@ -1,20 +1,19 @@
 # FreeRTOS SMP Template for Raspberry Pi Pico Board
 
-* [Introduction to Symmetric Multiprocessing (SMP) with FreeRTOS](./SMP.md)
-* [Port from FreeRTOS non-SMP version to FreeRTOS SMP version](./Porting-to-FreeRTOS-SMP-Kernel.md)
+* [Introduction to Symmetric Multiprocessing (SMP) with FreeRTOS](./docs/SMP.md)
+* [Port from FreeRTOS non-SMP version to FreeRTOS SMP version](./docs/Porting-to-FreeRTOS-SMP-Kernel.md)
 
 ## Building and Running the RTOS Template Applications
 
 ### Building
-To compile this project firstly initialize and update the submodules: 
+* Setup the [Raspberry Pi Pico SDK](https://github.com/raspberrypi/pico-sdk) build environment by following the instructions for
+[Getting Started With Pico](https://datasheets.raspberrypi.org/pico/getting-started-with-pico.pdf).
+* To compile this project firstly initialize and update the submodules: 
 ```
  git submodule update --init
 ```
-1. Setup the Raspberry Pi Pico SDK build environment by following the instructions for
-[Getting Started With Pico](https://datasheets.raspberrypi.org/pico/getting-started-with-pico.pdf).
-Ensure that `PICO_SDK_PATH` is set in your environment, or pass it via
-`-DPICO_SDK_PATH=xxx` on the CMake command line.
-2. Run the following commands:
+* Ensure that `PICO_SDK_PATH` is set in your environment, or pass it via `-DPICO_SDK_PATH=xxx` on the CMake command line.
+* Run the following commands:
 ```sh
 $ mkdir build
 $ cd build
