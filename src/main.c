@@ -18,17 +18,15 @@ static void led_blink (void *paramster)
 
     while(1)
     {
-        vTaskDelay(250);
+        vTaskDelay(500);
         gpio_put(PICO_DEFAULT_LED_PIN, 1);
-        vTaskDelay(250);
+        vTaskDelay(500);
         gpio_put(PICO_DEFAULT_LED_PIN, 0);
     }
 }
 
 int main(void)
 {
-    TimerHandle_t xExampleSoftwareTimer = NULL;
-
     /* Configure the system ready to run the demo.  The clock configuration
     can be done here if it was not done before main() was called. */
     /* Want to be able to printf */

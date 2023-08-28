@@ -27,6 +27,8 @@ target_link_libraries(pico-freertos PRIVATE
     FreeRTOS-Kernel-Heap4
 )
 
+target_compile_options(pico-freertos PRIVATE -Wall)
+
 # Run the entire project in SRAM
 # pico_set_binary_type(pico-freertos copy_to_ram)
 
